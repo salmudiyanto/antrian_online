@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "601855261178",
+    "project_id": "antrian-online-253a7",
+    "storage_bucket": "antrian-online-253a7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601855261178:android:c79165b7b4ca1ab7044c43",
+        "android_client_info": {
+          "package_name": "com.example.antrian_online"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEaLdowMHqlmNVJv0PRIpaPCLIQUflDvU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601855261178:android:e81f3c54c48dafee044c43",
+        "android_client_info": {
+          "package_name": "com.example.jadwal_realtime"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEaLdowMHqlmNVJv0PRIpaPCLIQUflDvU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
