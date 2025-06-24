@@ -41,48 +41,49 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBeskmaQr2Wzy0CAWbPlYu3pwq8mTSN_mE',
-    appId: '1:601855261178:web:1c1ddcb3bab98813044c43',
-    messagingSenderId: '601855261178',
-    projectId: 'antrian-online-253a7',
-    authDomain: 'antrian-online-253a7.firebaseapp.com',
-    storageBucket: 'antrian-online-253a7.firebasestorage.app',
-    measurementId: 'G-KE2471DRM2',
+    apiKey: 'AIzaSyBoIhKEUUlvFw-A9ygVhpxArtI2nLLxQtk',
+    appId: '1:542043797302:web:ee53009b16ec27562aa597',
+    messagingSenderId: '542043797302',
+    projectId: 'antrian-online-822b1',
+    authDomain: 'antrian-online-822b1.firebaseapp.com',
+    storageBucket: 'antrian-online-822b1.firebasestorage.app',
+    measurementId: 'G-RCV3PXC1EP',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDEaLdowMHqlmNVJv0PRIpaPCLIQUflDvU',
-    appId: '1:601855261178:android:c79165b7b4ca1ab7044c43',
-    messagingSenderId: '601855261178',
-    projectId: 'antrian-online-253a7',
-    storageBucket: 'antrian-online-253a7.firebasestorage.app',
+    apiKey: 'AIzaSyABFktmDkQuJOJmsplYpTOqw2510E7yveo',
+    appId: '1:542043797302:android:e74f9cbe425d8c0d2aa597',
+    messagingSenderId: '542043797302',
+    projectId: 'antrian-online-822b1',
+    storageBucket: 'antrian-online-822b1.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAvEkT29TPTWogHezKe97HX7z7DAtCe78o',
-    appId: '1:601855261178:ios:1cf04fd52b882b4f044c43',
-    messagingSenderId: '601855261178',
-    projectId: 'antrian-online-253a7',
-    storageBucket: 'antrian-online-253a7.firebasestorage.app',
+    apiKey: 'AIzaSyAs-YCIGFXyyVG-q7Z4QlVSXsJMwHG1SD4',
+    appId: '1:542043797302:ios:03ba6db412c8badd2aa597',
+    messagingSenderId: '542043797302',
+    projectId: 'antrian-online-822b1',
+    storageBucket: 'antrian-online-822b1.firebasestorage.app',
     iosBundleId: 'com.example.antrianOnline',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAvEkT29TPTWogHezKe97HX7z7DAtCe78o',
-    appId: '1:601855261178:ios:1cf04fd52b882b4f044c43',
-    messagingSenderId: '601855261178',
-    projectId: 'antrian-online-253a7',
-    storageBucket: 'antrian-online-253a7.firebasestorage.app',
+    apiKey: 'AIzaSyAs-YCIGFXyyVG-q7Z4QlVSXsJMwHG1SD4',
+    appId: '1:542043797302:ios:03ba6db412c8badd2aa597',
+    messagingSenderId: '542043797302',
+    projectId: 'antrian-online-822b1',
+    storageBucket: 'antrian-online-822b1.firebasestorage.app',
     iosBundleId: 'com.example.antrianOnline',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBeskmaQr2Wzy0CAWbPlYu3pwq8mTSN_mE',
-    appId: '1:601855261178:web:c10621e6a7e9d6b1044c43',
-    messagingSenderId: '601855261178',
-    projectId: 'antrian-online-253a7',
-    authDomain: 'antrian-online-253a7.firebaseapp.com',
-    storageBucket: 'antrian-online-253a7.firebasestorage.app',
-    measurementId: 'G-B4RQD9WMPT',
+    apiKey: 'AIzaSyBoIhKEUUlvFw-A9ygVhpxArtI2nLLxQtk',
+    appId: '1:542043797302:web:2c3bc2b9115152632aa597',
+    messagingSenderId: '542043797302',
+    projectId: 'antrian-online-822b1',
+    authDomain: 'antrian-online-822b1.firebaseapp.com',
+    storageBucket: 'antrian-online-822b1.firebasestorage.app',
+    measurementId: 'G-4MSQPN5EPS',
   );
+
 }

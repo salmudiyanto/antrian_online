@@ -18,7 +18,7 @@ class _LoginScreenState extends State<LoginScreen> {
   bool _loading = false;
 
   // Ganti ini dengan UID admin sebenarnya dari Firebase Authentication
-  final String adminUID = 'vNZKSnSrBZXuZZc3o06xG72lRtC3'; // <-- GANTI INI
+  final String adminUID = 'DHZvfwwnejVLOJgw1ZjGwPMPcmB3'; // <-- GANTI INI
 
   Future<void> login() async {
     if (!_formKey.currentState!.validate()) return;

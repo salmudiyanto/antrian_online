@@ -1,4 +1,6 @@
+import 'package:antrian_online/login_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -11,6 +13,13 @@ class AdminHomeScreen extends StatefulWidget {
 
 class _AdminHomeScreenState extends State<AdminHomeScreen> {
   final DateFormat formatter = DateFormat('HH:mm:ss');
+
+  void logout(BuildContext context)async{
+    await FirebaseAuth.instance.signOut();
+    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_) => LoginScreen()),
+    (route) => false,
+    );
+  }
 
   Stream<QuerySnapshot> getTodayAntrian() {
     final now = DateTime.now();
@@ -32,7 +41,16 @@ class _AdminHomeScreenState extends State<AdminHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Dashboard Admin')),
+      appBar: AppBar(
+        title: const Text('Dashboard Admin'), 
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            tooltip: 'Logout',
+            onPressed: () => logout(context),
+          )
+        ],
+        ),
       body: StreamBuilder<QuerySnapshot>(
         stream: getTodayAntrian(),
         builder: (context, snapshot) {
