@@ -1,6 +1,8 @@
+import 'package:antrian_online/main.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class PelangganStatusScreen extends StatefulWidget {
   const PelangganStatusScreen({super.key});
@@ -12,6 +14,25 @@ class PelangganStatusScreen extends StatefulWidget {
 class _PelangganStatusScreenState extends State<PelangganStatusScreen> {
   User? user;
   String? docId;
+
+  Future<void> showAntrianDipanggilNotification(String nama) async {
+    const AndroidNotificationDetails androidDetails = AndroidNotificationDetails(
+      'antrian_channel', 'Notifikasi Antrian',
+      channelDescription: 'Notifikasi saat antrian dipanggil',
+      importance: Importance.max,
+      priority: Priority.high,
+    );
+
+    const NotificationDetails notificationDetails =
+    NotificationDetails(android: androidDetails);
+
+    await flutterLocalNotificationsPlugin.show(
+      0,
+      'Nomor Antrian Dipanggil',
+      'Halo $nama, giliran kamu sekarang!',
+      notificationDetails,
+    );
+  }
 
   @override
   void initState() {
@@ -83,6 +104,15 @@ class _PelangganStatusScreenState extends State<PelangganStatusScreen> {
           final status = data['status'] ?? 'menunggu';
           final waktu = (data['waktu'] as Timestamp).toDate();
           final id = snapshot.data!.id;
+          final nama = data['nama'] ?? 'Pelanggan';
+
+          // Notifikasi saat status dipanggil
+          if (status == 'dipanggil') {
+            // hanya tampilkan 1 kali
+            Future.microtask(() {
+              showAntrianDipanggilNotification(nama);
+            });
+          }
 
           return FutureBuilder<int>(
             future: getNomorAntrian(id),

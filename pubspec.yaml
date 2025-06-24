@@ -39,6 +39,7 @@ dependencies:
   cloud_firestore: ^5.6.9
   provider: ^6.1.5
   intl: ^0.20.2
+  flutter_local_notifications: ^19.3.0
 
 dev_dependencies:
   flutter_test:

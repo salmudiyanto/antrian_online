@@ -18,7 +18,7 @@ class _LoginScreenState extends State<LoginScreen> {
   bool _loading = false;
 
   // Ganti ini dengan UID admin sebenarnya dari Firebase Authentication
-  final String adminUID = '1'; // <-- GANTI INI
+  final String adminUID = 'vNZKSnSrBZXuZZc3o06xG72lRtC3'; // <-- GANTI INI
 
   Future<void> login() async {
     if (!_formKey.currentState!.validate()) return;
@@ -33,6 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
       final user = credential.user;
       if (user != null) {
+        print(user.uid);
         if (user.uid == adminUID) {
           Navigator.pushReplacement(
               context, MaterialPageRoute(builder: (_) => const AdminHomeScreen()));
